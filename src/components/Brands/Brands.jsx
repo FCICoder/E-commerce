@@ -8,7 +8,7 @@ import { getBrands } from '../../Redux/BrandSlice';
 
 export default function Brands() {
   let {loading , brands}  = useSelector((state)=>state.brands);
-  console.log(brands);
+ 
 
   let dispatch = useDispatch();
   useEffect(()=>{

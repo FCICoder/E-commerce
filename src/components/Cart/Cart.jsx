@@ -13,7 +13,7 @@ export default function Cart() {
 
   async function getCart(){
     let { data }= await getLoggedUserCart();
-    console.log(data);
+   
       setCartdata(data);
       if(cartdata != null && data?.numOfCartItems >= 0){
         setFlag(true)
@@ -22,7 +22,7 @@ export default function Cart() {
 
   async function removeItem(id){
     let { data }= await removeCartItem(id);
-    console.log(data);
+
     setFlag(false)
     setCartdata(data);    
   }
@@ -34,14 +34,14 @@ export default function Cart() {
 
   async function removeCartItems (){
     let {data} = await clearUserCart();
-    console.log(data.message);
+
     setFlag(true)
     setCartdata(data);
     if(data.message==='success'){
-      console.log(cartdata);
+     
       setCartdata(null);
     }
-    console.log(cartdata);
+   
 
   }
   
@@ -52,7 +52,7 @@ export default function Cart() {
     }
   },[cartdata?.numOfCartItems])
   let info = cartdata?.data?.products;
-  console.log(info);
+
   return <>
 
   

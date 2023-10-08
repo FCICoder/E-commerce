@@ -152,33 +152,34 @@ let [newInfo,setNewInfo]=useState([])
     {/* <button className='btn bg-main text-white w-100' onClick={refetch}> get products</button> */}
     <div className="row g-0">
     {/* <input type="text" className='form-control' onChange={(e)=>listProducts(e)}  />  */}
-      {
-    //    newInfo.length > 0 && newInfo2 != '' ?         
-    //    newInfo?.map((products) =>  <div key={products.id} className="col-md-3  shadow">
-    //    <div className='fw-bold product p-3  cursor-pointer bg-light'>
-    //    <Link to={`./ProductDetails/${products.id}`}>
-    //      <img className='w-100' src={products.imageCover} alt={products.title} />
-    //      <span className='text-main font-sm fw-bolder'>{products.category.name}</span>
-    //      <p className='' style={{fontSize:10}}>{products.title.split(" ").splice(0,2).join(" ")}</p>
+      {/* {
+       newInfo.length > 0 && newInfo2 != '' ?         
+       newInfo?.map((products) =>  <div key={products.id} className="col-md-3  shadow">
+       <div className='fw-bold product p-3  cursor-pointer bg-light'>
+       <Link to={`./ProductDetails/${products.id}`}>
+         <img className='w-100' src={products.imageCover} alt={products.title} />
+         <span className='text-main font-sm fw-bolder'>{products.category.name}</span>
+         <p className='' style={{fontSize:10}}>{products.title.split(" ").splice(0,2).join(" ")}</p>
 
-    //      <div className='d-flex justify-content-between mt-3 bgj '>
-    //        <span style={{fontSize:18}}  >{products.price} EGP</span>
-    //        <span><i className='fas fa-star rating-color'></i> {products.ratingsAverage}</span>
-    //      </div>
-    //      </Link>   
-    //      <button className='btn bg-main text-white w-100 btn-sm mt-2 mb-2' onClick={()=>addProductToCart(products.id)}>add to cart</button>
-    //      {
-    //        products?.isFavorite?<i key={products.id} className="fa-solid fa-heart fa-2xl "   style={{color: "#d02525",}}  onClick={()=>removeFromWishList(products.id)}></i> 
-    //        :
-    //        <i key={products.id} className="fa-solid fa-heart fa-2xl"   onClick={()=>addToWishList(products.id)}></i>
+         <div className='d-flex justify-content-between mt-3 bgj '>
+           <span style={{fontSize:18}}  >{products.price} EGP</span>
+           <span><i className='fas fa-star rating-color'></i> {products.ratingsAverage}</span>
+         </div>
+         </Link>   
+         <button className='btn bg-main text-white w-100 btn-sm mt-2 mb-2' onClick={()=>addProductToCart(products.id)}>add to cart</button>
+         {
+           products?.isFavorite?<i key={products.id} className="fa-solid fa-heart fa-2xl "   style={{color: "#d02525",}}  onClick={()=>removeFromWishList(products.id)}></i> 
+           :
+           <i key={products.id} className="fa-solid fa-heart fa-2xl"   onClick={()=>addToWishList(products.id)}></i>
 
-    //      }
+         }
       
-    //       </div>
+          </div>
 
-    //  </div>)
-    //   :
-      info?.map((products) =>  <div key={products.id} className="col-md-3  shadow">
+     </div>)
+      : */}
+
+     { info?.map((products)=> <div key={products.id} className="col-md-3  shadow">
         <div className='fw-bold product p-3  cursor-pointer bg-light'>
         <Link to={`./ProductDetails/${products.id}`}>
           <img className='w-100' src={products.imageCover} alt={products.title} />
@@ -200,8 +201,8 @@ let [newInfo,setNewInfo]=useState([])
        
            </div>
 
-      </div>)
-      }
+      </div>)}
+      {/* } */}
     </div>
   </div>
   }
