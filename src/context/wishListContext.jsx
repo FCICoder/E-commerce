@@ -18,7 +18,7 @@ async function addtoWishList(prodId){
 
 async function getloggedwishlist(){
     try{
-        flager= true;
+        
         return axios.get(`https://ecommerce.routemisr.com/api/v1/wishlist`,{headers})
         .then((res)=>res).catch((err)=>err.message)
         
@@ -29,7 +29,7 @@ async function getloggedwishlist(){
 
 async function removeProduct(prodId){
     try{
-        flager = false;
+       
         return axios.delete(`https://ecommerce.routemisr.com/api/v1/wishlist/${prodId}`,{headers})
         .then((res)=>res).catch((err)=>err.message)
     }catch(err){
@@ -38,8 +38,8 @@ async function removeProduct(prodId){
 }
 
 export function WishContextProvider(props){
-    let [flag2 , setflage2 ] = useState(true);
-    return <wishListContext.Provider value={{  flager,  flag2,setflage2, addtoWishList , getloggedwishlist , removeProduct }}>
+    
+    return <wishListContext.Provider value={{   addtoWishList , getloggedwishlist , removeProduct }}>
         {props.children}
     </wishListContext.Provider>
 }

@@ -88,10 +88,10 @@ async function removeFromWishList(prodId){
   }
 
   let { isLoading  , data  }  = useQuery('featuredProducts', getFeaturedProducts ,{
-    cacheTime:5000,
+    cacheTime:50000,
     refetchOnMount:true,
     staleTime:30000,
-    refetchInterval:1000,
+    refetchInterval:10000,
     // enabled:=true
     
   });

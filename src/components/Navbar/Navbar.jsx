@@ -49,7 +49,10 @@ let [wishdata , setWishdata] = useState(null);
     setWishCounter(0)
     navigate('/E-commerce/login');
   }
-
+useEffect(()=>{
+  getloggedWishList()
+  
+},[])
 
   useEffect(() =>{
     getCart();
