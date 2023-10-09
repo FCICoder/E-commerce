@@ -28,7 +28,7 @@ export default function Login() {
     localStorage.setItem('userToken',data.token);
     setUserToken(data.token)
     setUserData(data.user)
-    Navigate('/');
+    Navigate('/E-commerce');
   }
   }
 

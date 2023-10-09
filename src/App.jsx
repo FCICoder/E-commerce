@@ -35,7 +35,7 @@ function App() {
   }, [])
   
   let routes = createBrowserRouter([
-    {path: '/', element:<Layout/>,children: [
+    {path: '/E-commerce', element:<Layout/>,children: [
       {index :true, element:<ProtectedRoute><Home/></ProtectedRoute>  },
       {path: 'products', element:<ProtectedRoute> <Products/></ProtectedRoute> },
       {path: 'cart', element:<ProtectedRoute><Cart/></ProtectedRoute>},
