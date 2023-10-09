@@ -26,7 +26,7 @@ export default function Register() {
     setUserToken(data.token)
     setUserData(data.user)
     setisLoading(false)
-    Navigate('/E-commerce')
+    Navigate('/E-commerce/')
   }
   }
 

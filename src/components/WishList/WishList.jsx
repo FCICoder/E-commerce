@@ -7,6 +7,7 @@ import toast from 'react-hot-toast';
 // import style from './WishList.module.css'
 
 export default function WishList() {
+  
   let {addtoCart} = useContext(CartContext)
 let {getloggedwishlist, removeProduct}=useContext(wishListContext);
 let [wishdata , setWishdata] = useState(null);
