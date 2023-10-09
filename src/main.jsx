@@ -12,7 +12,6 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 import './index.css'
 import UserContextProvider from './context/UserContext.jsx'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import {ReactQueryDevtools}from 'react-query/devtools'
 import CartContextProvider from './context/CartContext.jsx';
 import {WishContextProvider} from './context/wishListContext.jsx';
 

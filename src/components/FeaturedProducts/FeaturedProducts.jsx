@@ -78,8 +78,12 @@ async function removeFromWishList(prodId){
   }
   async function getFeaturedProducts(){
     getLoggedWishList()
-   
-    return axios.get(`https:ecommerce.routemisr.com/api/v1/products `);
+   try{
+    return axios.get(`https:ecommerce.routemisr.com/api/v1/products `).catch((err)=>err);
+
+   }catch(err){
+    console.log(err);
+   }
 
   }
   let { isLoading  , data  }  = useQuery('featuredProducts', getFeaturedProducts ,{
@@ -97,13 +101,13 @@ async function removeFromWishList(prodId){
   
     setWishdata(data);   
     setflage2(true);  
-    wishdata.map((prd)=>{
+    wishdata?.map((prd)=>{
       prd.isFavorite=true;
     })
   }
   let arr = wishdata?.data;
   
-  let info = data?.data.data;
+  let info = data?.data?.data;
   info?.map(prods=>{
     arr?.map(prd=>{
       if(prd.id == prods.id){

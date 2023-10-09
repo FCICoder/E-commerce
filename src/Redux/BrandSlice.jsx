@@ -21,10 +21,10 @@ let brandSlice=createSlice({
             state.brands = action.payload;
             state.loading = false;
         }),
-        builder.addCase(getBrands.pending , (state,action)=>{
+        builder.addCase(getBrands.pending , (state)=>{
             state.loading = true;
         }),
-        builder.addCase(getBrands.rejected , (state,action)=>{
+        builder.addCase(getBrands.rejected , (state)=>{
             state.loading = false;
         })
         
