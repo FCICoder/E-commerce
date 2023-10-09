@@ -89,8 +89,8 @@ async function removeFromWishList(prodId){
   let { isLoading  , data  }  = useQuery('featuredProducts', getFeaturedProducts ,{
     cacheTime:5000,
     refetchOnMount:true,
-    staleTime:15000,
-    refetchInterval:5000,
+    staleTime:30000,
+    refetchInterval:1000,
     // enabled:=true
     
   });

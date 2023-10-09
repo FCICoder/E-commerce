@@ -1,14 +1,15 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 // import style from './Register.module.css'
 import {useFormik} from 'formik'
 import * as  Yup from 'yup' 
 import axios from 'axios'
 import {  useNavigate } from 'react-router-dom'
 import { MagnifyingGlass } from 'react-loader-spinner'
+import { userContext } from '../../context/UserContext'
 
 
 export default function Register() {
-  
+  let { setUserToken , setUserData } = useContext(userContext)
   let Navigate =useNavigate();
   let [error,setError] = useState(null)
   let [isLoading , setisLoading]  = useState(false)
@@ -20,10 +21,12 @@ export default function Register() {
     setError(err.response.data.message)
     setisLoading(false)
   })
-
    if(data.message === 'success'){
+    localStorage.setItem('userToken',data.token);
+    setUserToken(data.token)
+    setUserData(data.user)
     setisLoading(false)
-    Navigate('/login')
+    Navigate('/')
   }
   }
 
