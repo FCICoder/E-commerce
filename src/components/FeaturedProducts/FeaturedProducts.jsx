@@ -79,13 +79,14 @@ async function removeFromWishList(prodId){
   async function getFeaturedProducts(){
     getLoggedWishList()
    try{
-    return axios.get(`https:ecommerce.routemisr.com/api/v1/products `).catch((err)=>err);
-
-   }catch(err){
+     let x = await axios.get(`https://ecommerce.routemisr.com/api/v1/products `).catch((err)=>err);
+    
+      return x
+    }catch(err){
     console.log(err);
    }
-
   }
+
   let { isLoading  , data  }  = useQuery('featuredProducts', getFeaturedProducts ,{
     cacheTime:5000,
     refetchOnMount:true,

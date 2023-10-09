@@ -15,7 +15,7 @@ export default function CategorySlider() {
   };
   async function getCategory(){
     try{
-      return axios.get(`https:ecommerce.routemisr.com/api/v1/categories `).catch((err)=>err)
+      return axios.get(`https://ecommerce.routemisr.com/api/v1/categories `).catch((err)=>err)
 
     }catch(err){
       console.log(err);

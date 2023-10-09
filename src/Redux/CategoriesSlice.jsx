@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export let getCategories = createAsyncThunk('categoriesSlice/categories',
 async ()=>{
-  let {data} = await axios.get(`https:ecommerce.routemisr.com/api/v1/categories`)
+  let {data} = await axios.get(`https://ecommerce.routemisr.com/api/v1/categories`)
     return data.data
 })
 

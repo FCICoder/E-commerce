@@ -3,7 +3,7 @@ import axios from "axios";
 
 export let getBrands = createAsyncThunk('brandSllice/brands',
 async ()=>{
-  let {data} = await axios.get(`https:ecommerce.routemisr.com/api/v1/brands`)
+  let {data} = await axios.get(`https://ecommerce.routemisr.com/api/v1/brands`)
     return data.data
 });
 
