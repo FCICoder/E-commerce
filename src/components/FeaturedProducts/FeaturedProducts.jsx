@@ -28,7 +28,7 @@ export default function FeaturedProducts() {
   //   getFeaturedProducts();
   // })
 let {addtoCart} = useContext(CartContext)
-let {addtoWishList, getloggedwishlist, setflage2 , flag2 , flager ,removeProduct}=useContext(wishListContext)
+let {addtoWishList, getloggedwishlist, setflage2 ,removeProduct}=useContext(wishListContext)
 let [wishdata , setWishdata] = useState(null);
 
 async function addToWishList(prodId){
@@ -82,10 +82,10 @@ async function removeFromWishList(prodId){
     return axios.get(`https:ecommerce.routemisr.com/api/v1/products `);
 
   }
-  let { isLoading , isError , data , isFetching  , }  = useQuery('featuredProducts', getFeaturedProducts ,{
+  let { isLoading  , data  }  = useQuery('featuredProducts', getFeaturedProducts ,{
     cacheTime:5000,
-    refetchOnMount:false,
-    staleTime:30000,
+    refetchOnMount:true,
+    staleTime:15000,
     refetchInterval:5000,
     // enabled:=true
     
@@ -128,9 +128,10 @@ let [newInfo,setNewInfo]=useState([])
     
     setNewInfo(i)
   }
+useEffect(()=>{
 
+},[])
   useEffect(()=>{
-    
   },[newInfo2])
   
   return <>
@@ -153,7 +154,8 @@ let [newInfo,setNewInfo]=useState([])
     <div className="row g-0">
     <input type="text" className='form-control' onChange={(e)=>listProducts(e)}  /> 
       {
-       newInfo.length > 0 && newInfo2.length !== 0 ?         
+       newInfo.length > 0 && newInfo2.length !== 0 
+       ?         
        newInfo?.map((products) =>  <div key={products.id} className="col-md-3  shadow">
        <div className='fw-bold product p-3  cursor-pointer bg-light'>
        <Link to={`./ProductDetails/${products.id}`}>

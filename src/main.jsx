@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </WishContextProvider>        
 
         </UserContextProvider>
-        <ReactQueryDevtools initialIsOpen={false} position='bottom-right'/>
+        {/* <ReactQueryDevtools initialIsOpen={false} position='bottom-right'/> */}
     </QueryClientProvider>
     </CartContextProvider>
 
