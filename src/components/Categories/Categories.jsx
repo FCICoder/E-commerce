@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
-import style from './Categories.module.css'
+// import style from './Categories.module.css'
 import { getCategories } from '../../Redux/CategoriesSlice'
 import { useDispatch, useSelector } from 'react-redux'
-import { useQuery } from 'react-query'
+// import { useQuery } from 'react-query'
 import { ColorRing } from 'react-loader-spinner';
+import { useEffect } from 'react';
 
 
 export default function Categories() {

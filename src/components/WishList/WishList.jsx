@@ -12,7 +12,7 @@ let {getloggedwishlist, removeProduct}=useContext(wishListContext);
 let [wishdata , setWishdata] = useState(null);
 let [flag , setFlag] = useState(true);
 
-async function getloggedWishList(){
+async function getloggedWishes(){
  let{data} = await getloggedwishlist()
   console.log(data);
  setWishdata(data);
@@ -47,7 +47,7 @@ async function removeItem(prodId){
    
  }
 useEffect(() =>{
-  getloggedWishList()
+  getloggedWishes()
 },[wishdata])
 
 
