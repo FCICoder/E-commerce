@@ -111,27 +111,27 @@ async function removeFromWishList(prodId){
       }
     })
   })
-  let i;
-  let [newInfo2,setNewInfo2]=useState('')
-let [newInfo,setNewInfo]=useState([])
-   function listProducts(e) {
+//   let i;
+//   let [newInfo2,setNewInfo2]=useState('')
+// let [newInfo,setNewInfo]=useState([])
+//    function listProducts(e) {
    
-      setNewInfo2(e.target.value)
-      i =info?.filter((prod)=>{
+//       setNewInfo2(e.target.value)
+//       i =info?.filter((prod)=>{
         
-      if(prod?.title.toLowerCase().includes(newInfo2)){
-       setNewInfo(prod);
-        return prod
-      }      
+//       if(prod?.title.toLowerCase().includes(newInfo2)){
+//        setNewInfo(prod);
+//         return prod
+//       }      
       
-    })
+//     })
     
-    setNewInfo(i)
-  }
+//     setNewInfo(i)
+//   }
 
-  useEffect(()=>{
+  // useEffect(()=>{
     
-  },[newInfo2])
+  // },[newInfo2])
   
   return <>
   
