@@ -46,7 +46,8 @@ let [wishdata , setWishdata] = useState(null);
     localStorage.removeItem('userToken');
     setUserToken(null);
     setCounter(0);
-    navigate('/login');
+    setWishCounter(0)
+    navigate('/E-commerce/login');
   }
 
 
@@ -75,25 +76,25 @@ let [wishdata , setWishdata] = useState(null);
                   {userToken !== null ?<>
             
                       <li className='nav-item'>
-                          <NavLink className="nav-link "  aria-current="page" to="/">Home </NavLink>                
+                          <NavLink className="nav-link  "  aria-current="page" to="/E-commerce/">Home </NavLink>                
                       </li> 
                       {/* <li className='nav-item'>
                           <Link className="nav-link " aria-current="page" to="/products">Products </Link>                
                       </li> */}
                       <li className='nav-item'>
-                          <NavLink className="nav-link "  aria-current="page" to="/categories">Categories</NavLink>                
+                          <NavLink className="nav-link "  aria-current="page" to="/E-commerce/categories">Categories</NavLink>                
                       </li>
                       <li className='nav-item'>
-                          <NavLink className="nav-link " aria-current="page" to="/brands">Brands</NavLink>                
+                          <NavLink className="nav-link " aria-current="page" to="/E-commerce/brands">Brands</NavLink>                
                       </li>
                       <li className='nav-item'>
-                          <NavLink className="nav-link " aria-current="page" to="/cart">Cart</NavLink>                
+                          <NavLink className="nav-link " aria-current="page" to="/E-commerce/cart">Cart</NavLink>                
                       </li> 
                       {/* <li className='nav-item'>
                           <NavLink className="nav-NavLink " aria-current="page" to="/profile">Profile</NavLink>                
                       </li> */}
                       <li className='nav-item'>
-                          <NavLink className="nav-link " aria-current="page" to="/wishList">wishList</NavLink>                
+                          <NavLink className="nav-link " aria-current="page" to="/E-commerce/wishList">wishList</NavLink>                
                       </li> 
 
             </>
@@ -106,14 +107,14 @@ let [wishdata , setWishdata] = useState(null);
                    
                       {userToken !==null ? <>
                         <li  className='nav-item mb-3 list-unstyled mt-2' style={{height:3}}>
-                    <Link rel="stylesheet" className=' me-3' to="/wishList" >
+                    <Link rel="stylesheet" className=' me-3' to="/E-commerce/wishList" >
                       <i  className=" fa-solid fa-heart fs-4 " style={{color:"red"}}>
                       <p className='crt text-dark' > {wishCounter}</p>
                       </i>
                    </Link>
                       
                     
-                    <Link rel="stylesheet" className='' to="/cart" >
+                    <Link rel="stylesheet" className='' to="/E-commerce/cart" >
                       <i  className=" fa-solid fa-cart-shopping fs-4 ">
                       <p className='crt'> {Counter}</p>
 
@@ -126,10 +127,10 @@ let [wishdata , setWishdata] = useState(null);
                       </li>
                       </>:<>
                       <li className='nav-item'>
-                          <Link className="nav-link " aria-current="page" to="login ">Login</Link>                
+                          <Link className="nav-link " aria-current="page" to="/E-commerce/login ">Login</Link>                
                       </li> 
                       <li className='nav-item'>
-                          <Link className="nav-link " aria-current="page" to="register">Register</Link>                
+                          <Link className="nav-link " aria-current="page" to="/E-commerce/register">Register</Link>                
                       </li>
                      
                       </>}

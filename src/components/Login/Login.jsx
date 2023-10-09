@@ -28,7 +28,7 @@ export default function Login() {
     localStorage.setItem('userToken',data.token);
     setUserToken(data.token)
     setUserData(data.user)
-    Navigate('/');
+    Navigate('/E-commerce');
   }
   }
 
@@ -66,9 +66,9 @@ export default function Login() {
       
      {!isLoading? <div className='d-flex align-items-center justify-content-between' >
      
-      <Link className='btn fw-bolder fs-5' to={'/register'}>Register Now</Link>
+      <Link className='btn fw-bolder fs-5' to={'/E-commerce/register'}>Register Now</Link>
       <div className=' border border-0 rounded text-light d-flex align-items-center '>
-      <Link className='btn fs-6 fw-bolder' to={'/forgotPassword'}>Forget Password</Link>
+      <Link className='btn fs-6 fw-bolder' to={'/E-commerce/forgotPassword'}>Forget Password</Link>
       <button disabled={!(formik.isValid && formik.dirty)} type='submit' className='btn bg-main text-white mt-2 mx-2'> Login </button>
      </div>
      </div>
