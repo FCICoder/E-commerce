@@ -101,9 +101,9 @@ async function removeFromWishList(prodId){
   
     setWishdata(data);   
     setflage2(true);  
-    wishdata?.map((prd)=>{
-      prd.isFavorite=true;
-    })
+    // wishdata?.map((prd)=>{
+    //   prd.isFavorite=true;
+    // })
   }
   let arr = wishdata?.data;
   
