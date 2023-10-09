@@ -62,12 +62,12 @@ export default function Cart() {
     <h3 className='h6 text-main fw-bolder mb-4 text-center' > Total Cart Price :{cartdata?.data?.totalCartPrice} EGP</h3>
     <button className='btn btn-danger text-light' onClick={()=>removeCartItems()}><i className='fas font-sm fa-trash-can h6'> </i> Clear Cart</button>
 
-    {info?.map((prod)=><div key={prod.product.id} className="row border-bottom py-2">
-        <div className="col-md-1">
+    {info?.map((prod)=><div key={prod.product.id} className="row border-bottom border-2 border-info py-5">
+        <div className="col-md-2">
           <img className='w-100' src={prod.product.imageCover} alt="image Cover" />
         </div>
-        <div className="col-md-11">
-          <div className='d-flex justify-content-between align-items-center'>
+        <div className="col-md-10">
+          <div className='d-flex justify-content-between align-items-center mt-2'>
             <div>
               <h3 className='h6'>{prod.product.title.split(' ').splice(0,3).join(' ') }</h3>
               <h6 className='text-main'> price : {prod.price}EGP</h6>
