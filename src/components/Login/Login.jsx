@@ -10,7 +10,7 @@ import { userContext } from '../../context/UserContext'
 
 
 export default function Login() {
-  let {userToken ,setUserToken , setUserData}  =useContext(userContext);  
+  let { setUserToken , setUserData}  =useContext(userContext);  
   let Navigate =useNavigate();
   let [error,setError] = useState(null)
   let [isLoading , setisLoading]  = useState(false)

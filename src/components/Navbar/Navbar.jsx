@@ -100,7 +100,12 @@ let [wishdata , setWishdata] = useState(null);
                      
                   :"" }   
                    </ul>
-                   <li  className='nav-item mb-3 list-unstyled' style={{height:3}}>
+              
+                   <ul className='navbar-nav  mb-2 mb-lg-0' >
+                    
+                   
+                      {userToken !==null ? <>
+                        <li  className='nav-item mb-3 list-unstyled mt-2' style={{height:3}}>
                     <Link rel="stylesheet" className=' me-3' to="/wishList" >
                       <i  className=" fa-solid fa-heart fs-4 " style={{color:"red"}}>
                       <p className='crt text-dark' > {wishCounter}</p>
@@ -115,10 +120,7 @@ let [wishdata , setWishdata] = useState(null);
                       </i>
                    </Link>
                     </li>
-                   <ul className='navbar-nav  mb-2 mb-lg-0' >
-                    
-                   
-                      {userToken !==null ? <>
+
                         <li className='nav-item'>
                           <span className="nav-link cursor-pointer" aria-current="page" onClick={logout}>Logout</span>                
                       </li>

@@ -111,27 +111,27 @@ async function removeFromWishList(prodId){
       }
     })
   })
-//   let i;
-//   let [newInfo2,setNewInfo2]=useState('')
-// let [newInfo,setNewInfo]=useState([])
-//    function listProducts(e) {
+  let i;
+  let [newInfo2,setNewInfo2]=useState('')
+let [newInfo,setNewInfo]=useState([])
+   function listProducts(e) {
    
-//       setNewInfo2(e.target.value)
-//       i =info?.filter((prod)=>{
+      setNewInfo2(e.target.value)
+      i =info?.filter((prod)=>{
         
-//       if(prod?.title.toLowerCase().includes(newInfo2)){
-//        setNewInfo(prod);
-//         return prod
-//       }      
+      if(prod?.title.toLowerCase().includes(newInfo2)){
+       setNewInfo(prod);
+        return prod
+      }      
       
-//     })
+    })
     
-//     setNewInfo(i)
-//   }
+    setNewInfo(i)
+  }
 
-  // useEffect(()=>{
+  useEffect(()=>{
     
-  // },[newInfo2])
+  },[newInfo2])
   
   return <>
   
@@ -151,9 +151,9 @@ async function removeFromWishList(prodId){
   <div className=" container py-2">
     {/* <button className='btn bg-main text-white w-100' onClick={refetch}> get products</button> */}
     <div className="row g-0">
-    {/* <input type="text" className='form-control' onChange={(e)=>listProducts(e)}  />  */}
-      {/* {
-       newInfo.length > 0 && newInfo2 != '' ?         
+    <input type="text" className='form-control' onChange={(e)=>listProducts(e)}  /> 
+      {
+       newInfo.length > 0 && newInfo2.length !== 0 ?         
        newInfo?.map((products) =>  <div key={products.id} className="col-md-3  shadow">
        <div className='fw-bold product p-3  cursor-pointer bg-light'>
        <Link to={`./ProductDetails/${products.id}`}>
@@ -177,9 +177,8 @@ async function removeFromWishList(prodId){
           </div>
 
      </div>)
-      : */}
-
-     { info?.map((products)=> <div key={products.id} className="col-md-3  shadow">
+      :
+      info?.map((products) =>  <div key={products.id} className="col-md-3  shadow">
         <div className='fw-bold product p-3  cursor-pointer bg-light'>
         <Link to={`./ProductDetails/${products.id}`}>
           <img className='w-100' src={products.imageCover} alt={products.title} />
@@ -201,8 +200,8 @@ async function removeFromWishList(prodId){
        
            </div>
 
-      </div>)}
-      {/* } */}
+      </div>)
+      }
     </div>
   </div>
   }
