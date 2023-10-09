@@ -34,7 +34,7 @@ export default function UpdatePassword() {
     let newToken = data.data.token
     setUserToken(newToken)
     localStorage.setItem('userToken',newToken);
-    Navigate('/');
+    Navigate('/E-commerce/');
   }
 }
   const formik = useFormik({

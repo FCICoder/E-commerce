@@ -29,7 +29,7 @@ export default function VerifyCode() {
 
   if(data.status === 'Success'){
     setisLoading(false);
-    Navigate('/resetPassword');
+    Navigate('/E-commerce/resetPassword');
   }
 }
   const formik = useFormik({

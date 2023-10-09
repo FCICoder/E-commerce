@@ -68,7 +68,7 @@ useEffect(()=>{
   return <>
    <nav className="navbar navbar-expand-lg mb-5" >
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/">
+    <Link className="navbar-brand" to="/E-commerce/">
       <img src={logo}  alt="frsh market logo" />
     </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

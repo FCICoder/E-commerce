@@ -82,7 +82,7 @@ export default function Cart() {
         </div>
       </div>
     )}
-    <Link to={'/address'} className='btn m-3 bg-main w-25 text-white'>
+    <Link to={'/E-commerce/address'} className='btn m-3 bg-main w-25 text-white'>
        Online Payment
     </Link>
     <button className='btn m-3 bg-main w-25 text-white'> Cash on Dilevery</button>

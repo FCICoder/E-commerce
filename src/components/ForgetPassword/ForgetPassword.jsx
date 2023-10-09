@@ -27,7 +27,7 @@ export default function ForgetPassword() {
 
   if(data.statusMsg === 'success'){
     setisLoading(false);
-    Navigate('/verfyCode');
+    Navigate('/E-commerce/verfyCode');
   }
 }
   const formik = useFormik({
