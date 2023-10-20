@@ -43,7 +43,7 @@ async function addProductToCart(id){
 
 let {id} =useParams();
 async function getProductDetails(id){
-  let data = await axios.get(`https:ecommerce.routemisr.com/api/v1/products/${id}`)
+  let data = await axios.get(`https://ecommerce.routemisr.com/api/v1/products/${id}`)
   return data;
 }
  let {isLoading , isError , data}= useQuery('getProductDetails',()=>getProductDetails(id));
