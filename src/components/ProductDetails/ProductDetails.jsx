@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
-import style from './ProductDetails.module.css'
+import { useContext} from 'react'
+// import style from './ProductDetails.module.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { useQuery } from 'react-query';

@@ -52,11 +52,9 @@ function App() {
       {path: 'verfyCode', element:<VerifyCode></VerifyCode>},
       {path: 'resetPassword', element:<UpdatePassword></UpdatePassword>},
 
-
-
-      {path: '*', element:<Notfound/>}
-
     ]},
+    {path: '*', element:<Notfound/>}
+
   ])
   
   
